@@ -204,11 +204,18 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(odo) {
-    let 
-    
+function carMaker(odometer) {
+    let car  = {
+      miles: odometer,
+      drive: function(distance) {
+        let newMiles = this.miles + distance
+        return newMiles
+      }
+    } 
+    return car
 }
 
+console.log(carMaker(10).drive(100))
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
